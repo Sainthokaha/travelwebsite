@@ -1,0 +1,134 @@
+:root {
+    --green: #1ec6b6;
+    --light-grey: #f7f7f7;
+    --dark: #0e1010;
+    --trans: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 460px) {
+    .featured-item-content {
+        transform: translateY(68%);
+    }
+}
+
+@media screen and (min-width: 678px) {
+    .test-item::after {
+        left: 4rem;
+        transform: translateX(0);
+    }
+
+    .test-item-info {
+        left: 1rem;
+        transform: translateX(0);
+        text-align-last: left;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-title p {
+        font-size: 1.4rem;
+    }
+
+    .featured-row, .services-row, .footer-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .featured-item, .services-item {
+        margin: 0;
+    }
+
+    .footer-row {
+        text-align: left;
+    }
+
+    .footer-item .social-links {
+        justify-content: start;
+    }
+
+    .social-links li:nth-child(1) {
+        margin: 0;
+    }
+
+    .subscribe-form {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-title h1 {
+        font-size: 4rem;
+    }
+
+    .header-form form {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .header-form .form-control, .header-form .btn {
+        margin: 0 0.5rem;
+    }
+
+    /* navbar */
+    #navbar-show-btn {
+        display: none;
+    }
+
+    #navbar-collapse {
+        display: flex !important;
+        background: transparent;
+        transform: translateX(0);
+        justify-content: flex-end;
+        height: auto;
+        padding: 0;
+        position: static;
+        width: 100%;
+    }
+
+    #navbar-close-btn {
+        display: none;
+    }
+
+    .navbar-nav {
+        margin-top: 0;
+    }
+
+    .nav-item {
+        margin: 0;
+        margin-left: 2rem;
+    }
+
+    /* change on scroll */
+    .navbar-cng .navbar-nav .nav-link {
+        color: var(--dark);
+    }
+
+    .site-brand span {
+        color: var(--dark);
+    }
+
+    /* .test-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    } */
+}
+
+@media screen and (min-width: 1200px) {
+    .test-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .featured-row, .services-row, .test-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
